@@ -4,7 +4,7 @@ spring:
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource    #druid连接池
     url: jdbc:mysql://127.0.0.1:3306/phm_product_dev?characterEncoding=utf8
-    password: 123456
+    password: root
     username: root
     driver-class-name: com.mysql.cj.jdbc.Driver
     druid:
@@ -55,7 +55,7 @@ spring:
     maxwait: -1
     timeout: 0
     isRedisCache: 1  #是否使用redis缓存
-    password: 123456
+
 #配置mybatis
 mybatis-plus:
   mapper-locations: classpath:mapper/**/*.xml

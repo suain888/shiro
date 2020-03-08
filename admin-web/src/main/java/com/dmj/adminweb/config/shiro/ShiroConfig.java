@@ -38,8 +38,8 @@ public class ShiroConfig {
     @Value("${spring.redis.port}")
     private String redisPort;
 
-    @Value("${spring.redis.password}")
-    private String redisPassword;
+//    @Value("${spring.redis.password}")
+//    private String redisPassword;
 
     // Session超时时间，单位为毫秒（默认30分钟）
     @Value("${shiro.session.expireTime}")
@@ -231,7 +231,7 @@ public class ShiroConfig {
         RedisManager redisManager = new RedisManager();
         redisManager.setHost(redisHost);
         redisManager.setPort(6379);
-        redisManager.setPassword(redisPassword);
+        //redisManager.setPassword(redisPassword);
         redisManager.setTimeout(1800); //设置过期时间
         return redisManager;
     }

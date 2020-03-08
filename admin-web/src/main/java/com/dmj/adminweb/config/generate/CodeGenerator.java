@@ -11,19 +11,16 @@ import com.baomidou.mybatisplus.generator.config.rules.NamingStrategy;
 import lombok.extern.slf4j.Slf4j;
 import java.util.Collections;
 
-/**
- * @author dongzhang at 2019/12/17-12:46
- */
 @Slf4j
 public class CodeGenerator {
 
     private static final String MODULE = "admin-web";
-    private static final String AUTHOR = "dongzhang";
+    private static final String AUTHOR = "ss";
 
     private static final String URL                = "jdbc:mysql://localhost:3306/admin?useUnicode=true&useSSL=false&characterEncoding=utf8&serverTimezone=UTC";
     private static final String DRIVER             = "com.mysql.cj.jdbc.Driver";
     private static final String USERNAME           = "root";
-    private static final String PASSWORD           = "123456";
+    private static final String PASSWORD           = "root";
     private static final String MODULE_PACKAGE     = "com.dmj.adminweb";
     private static final String MAPPER_XML         = "/src/main/resources/mapper";
     private static final String TEMPLATE_PATH      = "/templates/mapper.xml.vm";

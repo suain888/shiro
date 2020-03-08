@@ -16,5 +16,4 @@ public class AdminWebApplication {
         SpringApplication.run(AdminWebApplication.class, args);
     }
 
-
 }

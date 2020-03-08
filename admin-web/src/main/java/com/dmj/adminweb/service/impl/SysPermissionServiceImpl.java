@@ -12,14 +12,6 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-/**
- * <p>
- *  服务实现类
- * </p>
- *
- * @author dongzhang
- * @since 2020-01-26
- */
 @Service
 public class SysPermissionServiceImpl extends ServiceImpl<SysPermissionMapper, SysPermissionDTO> implements SysPermissionService {
 

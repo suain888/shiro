@@ -6,10 +6,6 @@ import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
-/**
- * 在线用户 数据层
- * 
- */
 public interface SysUserOnlineMapper extends BaseMapper<SysUserOnline> {
     /**
      * 通过会话序号查询信息

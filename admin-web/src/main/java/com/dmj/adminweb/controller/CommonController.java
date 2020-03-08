@@ -9,9 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
- * @description: 未授权活被踢出后的跳转方法
- * @author: Mr.Zhang
- * @create: 2019-09-12 11:34
+ * 未授权活被踢出后的跳转方法
  **/
 @RestController
 public class CommonController {

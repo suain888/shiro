@@ -8,10 +8,7 @@ import org.apache.shiro.authc.UsernamePasswordToken;
 import org.apache.shiro.authc.credential.SimpleCredentialsMatcher;
 
 /**
- * @program: admin-web
- * @description: 密码校验器
- * @author: Mr.Zhang
- * @create: 2019-09-12 10:09
+ * 密码校验器
  **/
 @Slf4j
 public class CredentialsMatcher extends SimpleCredentialsMatcher {

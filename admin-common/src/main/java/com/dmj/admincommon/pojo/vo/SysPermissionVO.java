@@ -8,14 +8,6 @@ import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
 
-/**
- * <p>
- * 
- * </p>
- *
- * @author dongzhang
- * @since 2020-01-26
- */
 @Data
 public class SysPermissionVO implements Serializable {
 

@@ -1,11 +1,7 @@
 package com.dmj.admincommon.common;
 
 /**
- * @param
- * @author zd
- * @description 错误代码
- * @date 2019/9/11
- * @return
+  错误代码
  */
 public enum ResultStatusCode {
     OK(200, "OK"),

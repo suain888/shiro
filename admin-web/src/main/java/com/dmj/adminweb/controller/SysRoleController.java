@@ -18,14 +18,6 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-/**
- * <p>
- *  前端控制器
- * </p>
- *
- * @author dongzhang
- * @since 2020-01-26
- */
 @RestController
 @Api(tags = "角色接口")
 public class SysRoleController {

@@ -33,14 +33,6 @@ import java.util.Date;
 import java.util.List;
 import java.util.Objects;
 
-/**
- * <p>
- *  服务实现类
- * </p>
- *
- * @author dongzhang
- * @since 2020-01-26
- */
 @Service
 @Slf4j
 public class SysRoleServiceImpl extends ServiceImpl<SysRoleMapper, SysRoleDTO> implements SysRoleService {

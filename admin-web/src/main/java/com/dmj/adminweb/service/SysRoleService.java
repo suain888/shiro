@@ -11,14 +11,6 @@ import org.w3c.dom.stylesheets.LinkStyle;
 
 import java.util.List;
 
-/**
- * <p>
- *  服务类
- * </p>
- *
- * @author dongzhang
- * @since 2020-01-26
- */
 public interface SysRoleService extends IService<SysRoleDTO> {
 
     Result<SysRoleQuery> insertRole(SysRoleQuery sysRoleQuery);

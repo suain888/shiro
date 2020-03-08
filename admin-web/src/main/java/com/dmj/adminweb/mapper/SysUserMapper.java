@@ -8,14 +8,6 @@ import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
-/**
- * <p>
- *  Mapper 接口
- * </p>
- *
- * @author dongzhang
- * @since 2020-01-26
- */
 public interface SysUserMapper extends BaseMapper<SysUserDTO> {
 
     SysUserVO findUserByUserName(@Param("email") String email);

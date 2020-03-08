@@ -20,10 +20,7 @@ import javax.validation.ConstraintViolationException;
 
 
 /**
- * @program: admin-web
- * @description: 全局异常拦截
- * @author: Mr.Zhang
- * @create: 2019-09-12 10:53
+ * 全局异常拦截
  **/
 @Slf4j
 @ControllerAdvice

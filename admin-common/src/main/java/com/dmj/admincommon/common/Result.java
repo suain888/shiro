@@ -3,8 +3,6 @@ package com.dmj.admincommon.common;
 
 /**
  * @description: 返回包装类
- * @author: Mr.Zhang
- * @create: 2019-09-12 11:28
  **/
 public class Result<T> {
 

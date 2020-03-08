@@ -11,14 +11,6 @@ import com.github.pagehelper.PageInfo;
 
 import java.util.List;
 
-/**
- * <p>
- *  服务类
- * </p>
- *
- * @author dongzhang
- * @since 2020-01-26
- */
 public interface SysUserService extends IService<SysUserDTO> {
 
 
