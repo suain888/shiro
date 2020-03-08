@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: admin-web
+  profiles:
+    active: dev
+server:
+  port: 8085

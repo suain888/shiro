@@ -1,0 +1,3 @@
+# Project exclude paths
+/admin-common/target/
+/admin-web/target/

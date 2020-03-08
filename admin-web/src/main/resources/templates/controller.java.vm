@@ -1,0 +1,85 @@
+package ${package.Controller};
+
+
+import io.swagger.annotations.Api;
+import org.springframework.web.bind.annotation.RequestMapping;
+import com.aimsphm.common.BaseResult;
+import ${package.Entity}.${entity};
+import ${package.Service}.${table.serviceName};
+    #if(${restControllerStyle})
+    import org.springframework.web.bind.annotation.RestController;
+    #else
+    import org.springframework.stereotype.Controller;
+    #end
+    #if(${swagger2})
+    import io.swagger.annotations.Api;
+    #end
+    #if(${superControllerClassPackage})
+    import ${superControllerClassPackage};
+    #end
+import javax.annotation.Resource;
+import org.springframework.web.bind.annotation.*;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+
+/**
+ * <p>
+ * $!{table.comment} 前端控制器
+ * </p>
+ *
+ * @author ${author}
+ * @since ${date}
+ */
+#if(${restControllerStyle})
+@RestController
+#else
+@Controller
+#end
+@RequestMapping("#if(${package.ModuleName})/${package.ModuleName}#end/#if(${controllerMappingHyphenStyle})${controllerMappingHyphen}#else${table.entityPath}#end")
+#if(${swagger2})
+@Api(tags = "$!{table.comment}")
+#end
+#if(${kotlin})
+class ${table.controllerName}#if(${superControllerClass}) : ${superControllerClass}()#end
+
+#else
+#if(${superControllerClass})
+public class ${table.controllerName} extends ${superControllerClass} {
+#else
+public class ${table.controllerName} {
+#end
+    @Resource
+    private ${table.serviceName} service;
+
+    @PostMapping("/save")
+    public BaseResult<${entity}> save(@RequestBody ${entity} entity) {
+        service.saveOrUpdate(entity);
+        return BaseResult.createBySuccess(entity);
+    }
+
+    @PutMapping("/update")
+    public BaseResult<${entiy}> update(@RequestBody ${entiy} entiy) {
+        service.saveOrUpdate(entity);
+        return BaseResult.createBySuccess(entity);
+    }
+
+
+    @DeleteMapping("/delete/{id}")
+    public BaseResult delete(@PathVariable String id) {
+        service.removeById(id);
+        return BaseResult.createBySuccess();
+    }
+
+    @GetMapping("/get/{id}")
+    public BaseResult<${entity}> select(@PathVariable String id) {
+        ${entity} data = service.getById(id);
+        return BaseResult.createBySuccess(data);
+    }
+
+    @PostMapping("/page")
+    public BaseResult<Page<${entity}>> page(@RequestBody Page<${entity}> page) {
+        page = service.page(page);
+        return BaseResult.createBySuccess(page);
+    }
+}
+
+#end

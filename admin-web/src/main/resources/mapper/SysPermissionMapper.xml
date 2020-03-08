@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dmj.adminweb.mapper.SysPermissionMapper">
+
+        <!-- 通用查询映射结果 -->
+        <resultMap id="BaseResultMap" type="com.dmj.admincommon.pojo.vo.SysPermissionVO">
+            <id column="id" property="id" />
+            <result column="permission_name" property="permissionName" />
+            <result column="permission_type" property="permissionType" />
+            <result column="permission_url" property="permissionUrl" />
+            <result column="permission_str" property="permissionStr" />
+            <result column="parent_id" property="parentId" />
+            <result column="permission_order" property="permissionOrder" />
+            <result column="is_view" property="isView" />
+            <result column="creater" property="creater" />
+            <result column="create_date" property="createDate" />
+            <result column="updater" property="updater" />
+            <result column="update_date" property="updateDate" />
+            <result column="delete_flag" property="deleteFlag" />
+        </resultMap>
+
+        <!-- 通用查询结果列 -->
+        <sql id="Base_Column_List">
+            p.id, p.permission_name, p.permission_type, p.permission_url, p.permission_str,
+            p.parent_id, p.creater, p.create_date, p.updater, p.update_date, p.delete_flag,
+            p.permission_order,p.is_view
+        </sql>
+    <select id="findPermissionList" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"></include>
+        from sys_permission p where p.delete_flag=false
+        order by p.permission_order asc
+    </select>
+    <select id="findPermissionByRoleId" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"></include>
+        from sys_role_permission rp
+        left join sys_permission p on rp.permission_id=p.id
+        where rp.delete_flag=false and p.delete_flag=false
+        and rp.role_id=#{roleId}
+    </select>
+
+</mapper>
