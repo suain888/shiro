@@ -9,7 +9,8 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * 异步任务管理器
- **/
+ *
+ * @author Suian*/
 public class AsyncManager {
     /**
      * 操作延迟10毫秒

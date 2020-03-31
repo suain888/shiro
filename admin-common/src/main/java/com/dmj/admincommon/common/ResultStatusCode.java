@@ -2,6 +2,7 @@ package com.dmj.admincommon.common;
 
 /**
   错误代码
+ * @author Suian
  */
 public enum ResultStatusCode {
     OK(200, "OK"),

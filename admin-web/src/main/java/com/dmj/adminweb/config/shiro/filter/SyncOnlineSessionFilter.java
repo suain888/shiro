@@ -11,7 +11,8 @@ import javax.servlet.ServletResponse;
 
 /**
  * 同步Session数据到Db
- * 
+ *
+ * @author Suian
  */
 public class SyncOnlineSessionFilter extends PathMatchingFilter {
 

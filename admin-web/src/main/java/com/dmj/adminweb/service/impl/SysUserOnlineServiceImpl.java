@@ -16,6 +16,7 @@ import java.util.Objects;
 /**
  * 在线用户 服务层处理
  *
+ * @author Suian
  */
 @Service
 public class SysUserOnlineServiceImpl implements ISysUserOnlineService {

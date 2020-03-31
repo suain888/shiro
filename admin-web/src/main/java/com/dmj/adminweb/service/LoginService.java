@@ -4,6 +4,9 @@ import com.dmj.admincommon.common.Result;
 
 import javax.servlet.http.HttpServletRequest;
 
+/**
+ * @author Suian
+ */
 public interface LoginService {
 
     /**

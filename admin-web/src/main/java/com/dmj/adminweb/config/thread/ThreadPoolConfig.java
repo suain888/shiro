@@ -11,7 +11,8 @@ import java.util.concurrent.ThreadPoolExecutor;
 
 /**
  * 线程池配置
- **/
+ *
+ * @author Suian*/
 @Configuration
 public class ThreadPoolConfig {
     // 核心线程池大小

@@ -14,7 +14,7 @@ import java.util.concurrent.TimeUnit;
 /**
  * redisTemplate封装
  *
- *  @author yinxp@dist.com.cn
+ * @author Suian
  */
 @Component
 public class RedisUtils {

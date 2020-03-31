@@ -10,7 +10,9 @@ import com.dmj.admincommon.pojo.vo.SysUserVO;
 import com.github.pagehelper.PageInfo;
 
 import java.util.List;
-
+/**
+ * @author Suian
+ */
 public interface SysUserService extends IService<SysUserDTO> {
 
 

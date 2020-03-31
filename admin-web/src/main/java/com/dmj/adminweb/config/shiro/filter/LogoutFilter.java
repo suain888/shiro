@@ -18,7 +18,6 @@ import java.util.Deque;
 
 /**
  * 退出过滤器
- * 
  */
 public class LogoutFilter extends org.apache.shiro.web.filter.authc.LogoutFilter {
 
@@ -31,37 +30,29 @@ public class LogoutFilter extends org.apache.shiro.web.filter.authc.LogoutFilter
 
     private Cache<String, Deque<Serializable>> cache;
 
-    public String getLoginUrl()
-    {
+    public String getLoginUrl() {
         return loginUrl;
     }
 
-    public void setLoginUrl(String loginUrl)
-    {
+    public void setLoginUrl(String loginUrl) {
         this.loginUrl = loginUrl;
     }
 
     @Override
-    protected boolean preHandle(ServletRequest request, ServletResponse response) throws Exception
-    {
-        try
-        {
+    protected boolean preHandle(ServletRequest request, ServletResponse response) throws Exception {
+        try {
             Subject subject = getSubject(request, response);
             String redirectUrl = getRedirectUrl(request, response, subject);
-            try
-            {
+            try {
                 SysUserVO user = ShiroUtils.getSysUser();
-                if (StringUtils.isNotNull(user))
-                {
+                if (StringUtils.isNotNull(user)) {
                     String loginName = user.getEmail();
                     // 清理缓存
                     cache.remove(loginName);
                 }
                 // 退出登录
                 subject.logout();
-            }
-            catch (SessionException ise)
-            {
+            } catch (SessionException ise) {
                 log.error("logout fail.", ise);
             }
             issueRedirect(request, response, redirectUrl);

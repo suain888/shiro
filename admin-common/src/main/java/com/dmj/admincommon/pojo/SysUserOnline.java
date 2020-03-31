@@ -11,6 +11,7 @@ import java.util.Date;
 /**
  * 当前在线会话 sys_user_online
  *
+ * @author Suian
  */
 public class SysUserOnline {
 

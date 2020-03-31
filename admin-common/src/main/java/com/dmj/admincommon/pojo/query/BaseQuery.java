@@ -1,7 +1,9 @@
 package com.dmj.admincommon.pojo.query;
 
 import lombok.Data;
-
+/**
+ * @author Suian
+ */
 @Data
 public class BaseQuery {
 

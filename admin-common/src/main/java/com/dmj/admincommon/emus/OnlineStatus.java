@@ -2,7 +2,8 @@ package com.dmj.admincommon.emus;
 
 /**
  * 用户会话
- * 
+ *
+ * @author Suian
  */
 public enum OnlineStatus {
     /** 用户状态 */

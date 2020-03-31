@@ -16,6 +16,9 @@ import org.springframework.web.bind.annotation.*;
 import java.util.Date;
 import java.util.List;
 
+/**
+ * @author Suian
+ */
 @RestController
 @Api(tags = "权限接口")
 public class SysPermissionController {

@@ -9,7 +9,8 @@ import org.apache.shiro.authc.credential.SimpleCredentialsMatcher;
 
 /**
  * 密码校验器
- **/
+ *
+ * @author Suian*/
 @Slf4j
 public class CredentialsMatcher extends SimpleCredentialsMatcher {
 

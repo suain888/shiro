@@ -12,6 +12,7 @@ import java.io.Serializable;
 /**
  * 会话db操作处理
  *
+ * @author Suian
  */
 @Component
 public class SysShiroService {

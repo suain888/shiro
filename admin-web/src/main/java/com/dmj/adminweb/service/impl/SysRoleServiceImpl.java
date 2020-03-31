@@ -32,7 +32,9 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.Date;
 import java.util.List;
 import java.util.Objects;
-
+/**
+ * @author Suian
+ */
 @Service
 @Slf4j
 public class SysRoleServiceImpl extends ServiceImpl<SysRoleMapper, SysRoleDTO> implements SysRoleService {

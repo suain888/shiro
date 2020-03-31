@@ -7,7 +7,9 @@ import com.dmj.admincommon.pojo.vo.SysUserVO;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
-
+/**
+ * @author Suian
+ */
 public interface SysUserMapper extends BaseMapper<SysUserDTO> {
 
     SysUserVO findUserByUserName(@Param("email") String email);

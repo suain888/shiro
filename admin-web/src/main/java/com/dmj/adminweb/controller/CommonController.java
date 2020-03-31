@@ -10,7 +10,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 /**
  * 未授权活被踢出后的跳转方法
- **/
+ *
+ * @author Suian*/
 @RestController
 public class CommonController {
 

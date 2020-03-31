@@ -5,7 +5,9 @@ import com.dmj.admincommon.pojo.SysUserOnline;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
-
+/**
+ * @author Suian
+ */
 public interface SysUserOnlineMapper extends BaseMapper<SysUserOnline> {
     /**
      * 通过会话序号查询信息

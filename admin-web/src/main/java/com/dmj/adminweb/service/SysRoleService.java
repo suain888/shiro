@@ -10,7 +10,9 @@ import com.github.pagehelper.PageInfo;
 import org.w3c.dom.stylesheets.LinkStyle;
 
 import java.util.List;
-
+/**
+ * @author Suian
+ */
 public interface SysRoleService extends IService<SysRoleDTO> {
 
     Result<SysRoleQuery> insertRole(SysRoleQuery sysRoleQuery);

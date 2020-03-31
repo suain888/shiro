@@ -12,6 +12,7 @@ import org.springframework.context.annotation.Configuration;
  * 数据库链接池druid监控平台的配置
  * 访问路径 http://localhost:8080/druid/index.html
  *
+ * @author Suian
  */
 @Configuration
 @Slf4j

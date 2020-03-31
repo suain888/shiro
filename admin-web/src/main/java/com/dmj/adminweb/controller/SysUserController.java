@@ -17,6 +17,9 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+/**
+ * @author Suian
+ */
 @RestController
 @Api(tags = "用户接口")
 public class SysUserController {

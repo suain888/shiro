@@ -8,7 +8,8 @@ import java.util.regex.Pattern;
 
 /**
  * Bean 工具类
- * 
+ *
+ * @author Suian
  */
 public class BeanUtils extends org.springframework.beans.BeanUtils {
     /** Bean方法名中属性名开始的下标 */

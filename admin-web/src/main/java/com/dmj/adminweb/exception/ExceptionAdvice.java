@@ -21,7 +21,8 @@ import javax.validation.ConstraintViolationException;
 
 /**
  * 全局异常拦截
- **/
+ *
+ * @author Suian*/
 @Slf4j
 @ControllerAdvice
 @ResponseBody

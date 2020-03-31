@@ -2,6 +2,7 @@ package com.dmj.admincommon.common;
 
 
 /**
+ * @author Suian
  * @description: 返回包装类
  **/
 public class Result<T> {

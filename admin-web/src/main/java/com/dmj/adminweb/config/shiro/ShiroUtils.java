@@ -12,7 +12,7 @@ import org.apache.shiro.subject.Subject;
 
 /**
  * shiro 工具类
- * 
+ * @author Suian
  */
 public class ShiroUtils {
     public static Subject getSubject()

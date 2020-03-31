@@ -1,13 +1,13 @@
 package com.dmj.admincommon.util;
 
 import com.dmj.admincommon.core.StrFormatter;
-
 import java.util.Collection;
 import java.util.Map;
 
 /**
  * 字符串工具类
- * 
+ *
+ * @author Suian
  */
 public class StringUtils extends org.apache.commons.lang3.StringUtils {
     /** 空字符串 */

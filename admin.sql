@@ -1,24 +1,25 @@
 /*
-Navicat MySQL Data Transfer
+SQLyog Ultimate v11.33 (64 bit)
+MySQL - 5.5.49 : Database - admin
+*********************************************************************
+*/
 
-Source Server         : dev
-Source Server Version : 50726
-Source Host           : localhost:3306
-Source Database       : admin
+/*!40101 SET NAMES utf8 */;
 
-Target Server Type    : MYSQL
-Target Server Version : 50726
-File Encoding         : 65001
+/*!40101 SET SQL_MODE=''*/;
 
-Date: 2020-03-08 19:06:46
-*/
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+CREATE DATABASE /*!32312 IF NOT EXISTS*/`admin` /*!40100 DEFAULT CHARACTER SET utf8 */;
 
-SET FOREIGN_KEY_CHECKS=0;
+USE `admin`;
 
--- ----------------------------
--- Table structure for sys_permission
--- ----------------------------
+/*Table structure for table `sys_permission` */
+
 DROP TABLE IF EXISTS `sys_permission`;
+
 CREATE TABLE `sys_permission` (
   `id` varchar(64) NOT NULL,
   `permission_name` varchar(64) DEFAULT NULL COMMENT '权限名称',
@@ -37,29 +38,14 @@ CREATE TABLE `sys_permission` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- ----------------------------
--- Records of sys_permission
--- ----------------------------
-INSERT INTO `sys_permission` VALUES ('1236249573083074562', '用户管理', 'menu', '', 'sys:user', null, null, null, null, null, '0', null, '0', '0');
-INSERT INTO `sys_permission` VALUES ('1236249738175074306', '角色管理', 'menu', '', 'sys:role', null, null, null, null, null, '0', null, '0', '0');
-INSERT INTO `sys_permission` VALUES ('1236249852591493122', '菜单管理', 'menu', '', 'sys:permission', null, null, null, null, null, '0', null, '0', '0');
-INSERT INTO `sys_permission` VALUES ('1236250029930860545', '用户创建', 'button', '', 'sys:user:create', '1236249573083074562', null, null, null, null, '0', null, '2', '0');
-INSERT INTO `sys_permission` VALUES ('1236250096934866945', '用户编辑', 'button', '', 'sys:user:update', '1236249573083074562', null, null, null, null, '0', null, '1', '0');
-INSERT INTO `sys_permission` VALUES ('1236250153285341185', '用户删除', 'button', '', 'sys:user:delete', '1236249573083074562', null, null, null, null, '0', null, '3', '0');
-INSERT INTO `sys_permission` VALUES ('1236250259334123522', '用户列表', 'button', '', 'sys:user:view', '1236249573083074562', null, null, null, null, '0', null, '4', '0');
-INSERT INTO `sys_permission` VALUES ('1236250491786645506', '角色列表', 'button', '', 'sys:role:view', '1236249738175074306', null, null, null, null, '0', null, '1', '0');
-INSERT INTO `sys_permission` VALUES ('1236250557628829697', '角色创建', 'button', '', 'sys:role:create', '1236249738175074306', null, null, null, null, '0', null, '2', '0');
-INSERT INTO `sys_permission` VALUES ('1236250615384395777', '角色编辑', 'button', '', 'sys:role:update', '1236249738175074306', null, null, null, null, '0', null, '3', '0');
-INSERT INTO `sys_permission` VALUES ('1236250668450729985', '角色删除', 'button', '', 'sys:role:delete', '1236249738175074306', null, null, null, null, '0', null, '4', '0');
-INSERT INTO `sys_permission` VALUES ('1236250741083492354', '菜单删除', 'button', '', 'sys:permission:delete', '1236249852591493122', null, null, null, null, '0', null, '1', '0');
-INSERT INTO `sys_permission` VALUES ('1236250793734590465', '菜单创建', 'button', '', 'sys:permission:create', '1236249852591493122', null, null, null, null, '0', null, '2', '0');
-INSERT INTO `sys_permission` VALUES ('1236250837355352066', '菜单编辑', 'button', '', 'sys:permission:update', '1236249852591493122', null, null, null, null, '0', null, '3', '0');
-INSERT INTO `sys_permission` VALUES ('1236250946893795329', '菜单列表', 'button', '', 'sys:permission:view', '1236249852591493122', null, null, null, null, '0', null, '4', '0');
+/*Data for the table `sys_permission` */
 
--- ----------------------------
--- Table structure for sys_role
--- ----------------------------
+insert  into `sys_permission`(`id`,`permission_name`,`permission_type`,`permission_url`,`permission_str`,`parent_id`,`creater`,`create_date`,`updater`,`update_date`,`delete_flag`,`permission_icon`,`permission_order`,`is_view`) values ('1236249573083074562','用户管理','menu','','sys:user',NULL,NULL,NULL,NULL,NULL,0,NULL,0,0),('1236249738175074306','角色管理','menu','','sys:role',NULL,NULL,NULL,NULL,NULL,0,NULL,0,0),('1236249852591493122','菜单管理','menu','','sys:permission',NULL,NULL,NULL,NULL,NULL,0,NULL,0,0),('1236250029930860545','用户创建','button','','sys:user:create','1236249573083074562',NULL,NULL,NULL,NULL,0,NULL,2,0),('1236250096934866945','用户编辑','button','','sys:user:update','1236249573083074562',NULL,NULL,NULL,NULL,0,NULL,1,0),('1236250153285341185','用户删除','button','','sys:user:delete','1236249573083074562',NULL,NULL,NULL,NULL,0,NULL,3,0),('1236250259334123522','用户列表','button','','sys:user:view','1236249573083074562',NULL,NULL,NULL,NULL,0,NULL,4,0),('1236250491786645506','角色列表','button','','sys:role:view','1236249738175074306',NULL,NULL,NULL,NULL,0,NULL,1,0),('1236250557628829697','角色创建','button','','sys:role:create','1236249738175074306',NULL,NULL,NULL,NULL,0,NULL,2,0),('1236250615384395777','角色编辑','button','','sys:role:update','1236249738175074306',NULL,NULL,NULL,NULL,0,NULL,3,0),('1236250668450729985','角色删除','button','','sys:role:delete','1236249738175074306',NULL,NULL,NULL,NULL,0,NULL,4,0),('1236250741083492354','菜单删除','button','','sys:permission:delete','1236249852591493122',NULL,NULL,NULL,NULL,0,NULL,1,0),('1236250793734590465','菜单创建','button','','sys:permission:create','1236249852591493122',NULL,NULL,NULL,NULL,0,NULL,2,0),('1236250837355352066','菜单编辑','button','','sys:permission:update','1236249852591493122',NULL,NULL,NULL,NULL,0,NULL,3,0),('1236250946893795329','菜单列表','button','','sys:permission:view','1236249852591493122',NULL,NULL,NULL,NULL,0,NULL,4,0);
+
+/*Table structure for table `sys_role` */
+
 DROP TABLE IF EXISTS `sys_role`;
+
 CREATE TABLE `sys_role` (
   `id` varchar(64) NOT NULL COMMENT '主键ID',
   `role_name` varchar(64) DEFAULT NULL COMMENT '角色名称',
@@ -74,15 +60,14 @@ CREATE TABLE `sys_role` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- ----------------------------
--- Records of sys_role
--- ----------------------------
-INSERT INTO `sys_role` VALUES ('1236258106935721986', '超级管理员', '拥有一切的男人', null, null, null, null, null, '0', '1');
+/*Data for the table `sys_role` */
 
--- ----------------------------
--- Table structure for sys_role_permission
--- ----------------------------
+insert  into `sys_role`(`id`,`role_name`,`role_desc`,`compay_id`,`creater`,`create_date`,`updater`,`update_date`,`delete_flag`,`sys_default`) values ('1236258106935721986','超级管理员','拥有一切的男人',NULL,NULL,NULL,NULL,NULL,0,1);
+
+/*Table structure for table `sys_role_permission` */
+
 DROP TABLE IF EXISTS `sys_role_permission`;
+
 CREATE TABLE `sys_role_permission` (
   `id` varchar(64) NOT NULL,
   `role_id` varchar(64) DEFAULT NULL,
@@ -95,29 +80,14 @@ CREATE TABLE `sys_role_permission` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- ----------------------------
--- Records of sys_role_permission
--- ----------------------------
-INSERT INTO `sys_role_permission` VALUES ('1236258107258683393', '1236258106935721986', '1236249573083074562', null, null, null, null, '0');
-INSERT INTO `sys_role_permission` VALUES ('1236258107422261250', '1236258106935721986', '1236249738175074306', null, null, null, null, '0');
-INSERT INTO `sys_role_permission` VALUES ('1236258107430649858', '1236258106935721986', '1236249852591493122', null, null, null, null, '0');
-INSERT INTO `sys_role_permission` VALUES ('1236258107506147329', '1236258106935721986', '1236250029930860545', null, null, null, null, '0');
-INSERT INTO `sys_role_permission` VALUES ('1236258107522924546', '1236258106935721986', '1236250096934866945', null, null, null, null, '0');
-INSERT INTO `sys_role_permission` VALUES ('1236258107539701761', '1236258106935721986', '1236250153285341185', null, null, null, null, '0');
-INSERT INTO `sys_role_permission` VALUES ('1236258107548090369', '1236258106935721986', '1236250259334123522', null, null, null, null, '0');
-INSERT INTO `sys_role_permission` VALUES ('1236258107556478978', '1236258106935721986', '1236250491786645506', null, null, null, null, '0');
-INSERT INTO `sys_role_permission` VALUES ('1236258107569061890', '1236258106935721986', '1236250557628829697', null, null, null, null, '0');
-INSERT INTO `sys_role_permission` VALUES ('1236258107577450498', '1236258106935721986', '1236250615384395777', null, null, null, null, '0');
-INSERT INTO `sys_role_permission` VALUES ('1236258107585839105', '1236258106935721986', '1236250668450729985', null, null, null, null, '0');
-INSERT INTO `sys_role_permission` VALUES ('1236258107598422017', '1236258106935721986', '1236250741083492354', null, null, null, null, '0');
-INSERT INTO `sys_role_permission` VALUES ('1236258107606810625', '1236258106935721986', '1236250793734590465', null, null, null, null, '0');
-INSERT INTO `sys_role_permission` VALUES ('1236258107615199233', '1236258106935721986', '1236250837355352066', null, null, null, null, '0');
-INSERT INTO `sys_role_permission` VALUES ('1236258107623587841', '1236258106935721986', '1236250946893795329', null, null, null, null, '0');
+/*Data for the table `sys_role_permission` */
 
--- ----------------------------
--- Table structure for sys_user
--- ----------------------------
+insert  into `sys_role_permission`(`id`,`role_id`,`permission_id`,`creater`,`create_date`,`updater`,`update_date`,`delete_flag`) values ('1236258107258683393','1236258106935721986','1236249573083074562',NULL,NULL,NULL,NULL,0),('1236258107422261250','1236258106935721986','1236249738175074306',NULL,NULL,NULL,NULL,0),('1236258107430649858','1236258106935721986','1236249852591493122',NULL,NULL,NULL,NULL,0),('1236258107506147329','1236258106935721986','1236250029930860545',NULL,NULL,NULL,NULL,0),('1236258107522924546','1236258106935721986','1236250096934866945',NULL,NULL,NULL,NULL,0),('1236258107539701761','1236258106935721986','1236250153285341185',NULL,NULL,NULL,NULL,0),('1236258107548090369','1236258106935721986','1236250259334123522',NULL,NULL,NULL,NULL,0),('1236258107556478978','1236258106935721986','1236250491786645506',NULL,NULL,NULL,NULL,0),('1236258107569061890','1236258106935721986','1236250557628829697',NULL,NULL,NULL,NULL,0),('1236258107577450498','1236258106935721986','1236250615384395777',NULL,NULL,NULL,NULL,0),('1236258107585839105','1236258106935721986','1236250668450729985',NULL,NULL,NULL,NULL,0),('1236258107598422017','1236258106935721986','1236250741083492354',NULL,NULL,NULL,NULL,0),('1236258107606810625','1236258106935721986','1236250793734590465',NULL,NULL,NULL,NULL,0),('1236258107615199233','1236258106935721986','1236250837355352066',NULL,NULL,NULL,NULL,0),('1236258107623587841','1236258106935721986','1236250946893795329',NULL,NULL,NULL,NULL,0);
+
+/*Table structure for table `sys_user` */
+
 DROP TABLE IF EXISTS `sys_user`;
+
 CREATE TABLE `sys_user` (
   `id` varchar(64) NOT NULL COMMENT '主键ID',
   `user_name` varchar(64) DEFAULT NULL COMMENT '用户名',
@@ -143,23 +113,14 @@ CREATE TABLE `sys_user` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- ----------------------------
--- Records of sys_user
--- ----------------------------
-INSERT INTO `sys_user` VALUES ('1236260255979651073', '管理员', '4QrcOUm6Wau+VuBX8g+IPg==', 'tC6iL0SBUJAzpTCTF2bF', null, null, null, null, null, '管理员', '123456789', '123@qq.com', '123456789', null, '0', '0', '0', null, null, null, null);
-INSERT INTO `sys_user` VALUES ('1236567374796734466', '1', 'ZRK9Q9nKpuAsmQsKgmUtyg==', 'mQXNWXo5qZdtdx5nX4OO', null, null, null, null, null, null, '11', '111', null, null, '0', '1', '1', '2020-03-08 16:20:11', null, null, null);
-INSERT INTO `sys_user` VALUES ('1236567820319899650', '111', 'tZxnvxlqR1gZHkL3ZnDOug==', 'w8rOMeoIPO2tBxqsKPPU', null, null, null, null, null, null, '111111', '11111', null, null, '0', '0', '1', '2020-03-08 16:21:57', null, null, null);
-INSERT INTO `sys_user` VALUES ('1236568136973074434', '222', 'vL4zZeasleosA0OiOVg03Q==', 'NUsvuvSGZX38NQOyZPYu', null, null, null, null, null, null, '222', '22', null, null, '0', '0', '1', '2020-03-08 16:23:13', null, null, null);
-INSERT INTO `sys_user` VALUES ('1236568285522739201', '111', 'aY1RoZ2KEhzlgUmde3AWaA==', 'gLu6AX2rQ5q5qImmP9ME', null, null, null, null, null, null, '11', '333', null, null, '0', '1', '1', '2020-03-08 16:23:48', null, null, null);
-INSERT INTO `sys_user` VALUES ('1236570313795878913', '1', 'xMpCOKC5I4INzFCab3WEmw==', 'hLedFzhhLB62pIHFpfQl', null, null, null, null, null, null, '11', '55', null, null, '0', '1', '1', '2020-03-08 16:31:52', null, null, null);
-INSERT INTO `sys_user` VALUES ('1236570552028151810', '11', 'ZRK9Q9nKpuAsmQsKgmUtyg==', 'yNYCFK4vzICs7cpcfQXo', null, null, null, null, null, null, '111', '7', null, null, '0', '1', '1', '2020-03-08 16:32:49', null, null, null);
-INSERT INTO `sys_user` VALUES ('1236570811756232706', '111', 'tZxnvxlqR1gZHkL3ZnDOug==', 'uCo41HGScjD08UYoMG8D', null, null, null, null, null, null, '11', '8', null, null, '0', '1', '1', '2020-03-08 16:33:51', null, null, null);
-INSERT INTO `sys_user` VALUES ('1236578498887909378', '11', 'aY1RoZ2KEhzlgUmde3AWaA==', 'pDaFcOz3zVWoW2VZCKWY', null, null, null, null, null, null, '13423456756', '582833@qq.com', null, null, '0', '1', '1', '2020-03-08 17:04:23', null, null, null);
+/*Data for the table `sys_user` */
 
--- ----------------------------
--- Table structure for sys_user_online
--- ----------------------------
+insert  into `sys_user`(`id`,`user_name`,`user_password`,`salt`,`nick_name`,`company_id`,`company_name`,`department_id`,`department_name`,`job`,`mobile`,`email`,`phone`,`avatar_url`,`secret`,`delete_flag`,`locked`,`create_time`,`update_time`,`creator`,`updater`) values ('1','132','ICy5YqxZB1uWSwcVLSNLcA==','IDUz2dlUXQE2iXSLgBN5','密码123',NULL,NULL,NULL,NULL,NULL,NULL,'123',NULL,NULL,0,0,0,'2020-03-08 23:31:58',NULL,NULL,NULL),('1236260255979651073','管理员','ICy5YqxZB1uWSwcVLSNLcA==','IDUz2dlUXQE2iXSLgBN5',NULL,NULL,NULL,NULL,NULL,'管理员','123456789','123@qq.com','123456789',NULL,0,0,0,NULL,NULL,NULL,NULL),('1236567374796734466','1','ICy5YqxZB1uWSwcVLSNLcA==','IDUz2dlUXQE2iXSLgBN5',NULL,NULL,NULL,NULL,NULL,NULL,'11','111',NULL,NULL,0,1,1,'2020-03-08 16:20:11',NULL,NULL,NULL),('1236567820319899650','111','ICy5YqxZB1uWSwcVLSNLcA==','IDUz2dlUXQE2iXSLgBN5',NULL,NULL,NULL,NULL,NULL,NULL,'111111','11111',NULL,NULL,0,0,1,'2020-03-08 16:21:57',NULL,NULL,NULL),('1236568136973074434','222','ICy5YqxZB1uWSwcVLSNLcA==','IDUz2dlUXQE2iXSLgBN5',NULL,NULL,NULL,NULL,NULL,NULL,'222','22',NULL,NULL,0,0,1,'2020-03-08 16:23:13',NULL,NULL,NULL),('1236568285522739201','111','ICy5YqxZB1uWSwcVLSNLcA==','IDUz2dlUXQE2iXSLgBN5',NULL,NULL,NULL,NULL,NULL,NULL,'11','333',NULL,NULL,0,1,1,'2020-03-08 16:23:48',NULL,NULL,NULL),('1236570313795878913','1','ICy5YqxZB1uWSwcVLSNLcA==','IDUz2dlUXQE2iXSLgBN5',NULL,NULL,NULL,NULL,NULL,NULL,'11','55',NULL,NULL,0,1,1,'2020-03-08 16:31:52',NULL,NULL,NULL),('1236570552028151810','11','ICy5YqxZB1uWSwcVLSNLcA==','IDUz2dlUXQE2iXSLgBN5',NULL,NULL,NULL,NULL,NULL,NULL,'111','7',NULL,NULL,0,1,1,'2020-03-08 16:32:49',NULL,NULL,NULL),('1236570811756232706','111','ICy5YqxZB1uWSwcVLSNLcA==','IDUz2dlUXQE2iXSLgBN5',NULL,NULL,NULL,NULL,NULL,NULL,'11','8',NULL,NULL,0,1,1,'2020-03-08 16:33:51',NULL,NULL,NULL),('1236578498887909378','11','ICy5YqxZB1uWSwcVLSNLcA==','IDUz2dlUXQE2iXSLgBN5',NULL,NULL,NULL,NULL,NULL,NULL,'13423456756','582833@qq.com',NULL,NULL,0,1,1,'2020-03-08 17:04:23',NULL,NULL,NULL);
+
+/*Table structure for table `sys_user_online` */
+
 DROP TABLE IF EXISTS `sys_user_online`;
+
 CREATE TABLE `sys_user_online` (
   `sessionId` varchar(50) NOT NULL DEFAULT '' COMMENT '用户会话id',
   `login_name` varchar(50) DEFAULT '' COMMENT '登录账号',
@@ -175,14 +136,12 @@ CREATE TABLE `sys_user_online` (
   PRIMARY KEY (`sessionId`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='在线用户记录';
 
--- ----------------------------
--- Records of sys_user_online
--- ----------------------------
+/*Data for the table `sys_user_online` */
 
--- ----------------------------
--- Table structure for sys_user_role
--- ----------------------------
+/*Table structure for table `sys_user_role` */
+
 DROP TABLE IF EXISTS `sys_user_role`;
+
 CREATE TABLE `sys_user_role` (
   `id` varchar(64) NOT NULL,
   `user_id` varchar(64) DEFAULT NULL,
@@ -195,15 +154,11 @@ CREATE TABLE `sys_user_role` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- ----------------------------
--- Records of sys_user_role
--- ----------------------------
-INSERT INTO `sys_user_role` VALUES ('1236260256139034626', '1236260255979651073', '1236258106935721986', null, null, null, null, '0');
-INSERT INTO `sys_user_role` VALUES ('1236567374998061058', '1236567374796734466', '1236258106935721986', null, null, null, null, '0');
-INSERT INTO `sys_user_role` VALUES ('1236567820445728769', '1236567820319899650', '1236258106935721986', null, null, null, null, '0');
-INSERT INTO `sys_user_role` VALUES ('1236568137056960514', '1236568136973074434', '1236258106935721986', null, null, null, null, '0');
-INSERT INTO `sys_user_role` VALUES ('1236568285686317057', '1236568285522739201', '1236258106935721986', null, null, null, null, '0');
-INSERT INTO `sys_user_role` VALUES ('1236570313972039682', '1236570313795878913', '1236258106935721986', null, null, null, null, '0');
-INSERT INTO `sys_user_role` VALUES ('1236570552208506881', '1236570552028151810', '1236258106935721986', null, null, null, null, '0');
-INSERT INTO `sys_user_role` VALUES ('1236570811944976386', '1236570811756232706', '1236258106935721986', null, null, null, null, '0');
-INSERT INTO `sys_user_role` VALUES ('1236578498917269506', '1236578498887909378', '1236258106935721986', null, null, null, null, '0');
+/*Data for the table `sys_user_role` */
+
+insert  into `sys_user_role`(`id`,`user_id`,`role_id`,`creater`,`create_date`,`updater`,`update_date`,`delete_flag`) values ('1236260256139034626','1236260255979651073','1236258106935721986',NULL,NULL,NULL,NULL,0),('1236567374998061058','1236567374796734466','1236258106935721986',NULL,NULL,NULL,NULL,0),('1236567820445728769','1236567820319899650','1236258106935721986',NULL,NULL,NULL,NULL,0),('1236568137056960514','1236568136973074434','1236258106935721986',NULL,NULL,NULL,NULL,0),('1236568285686317057','1236568285522739201','1236258106935721986',NULL,NULL,NULL,NULL,0),('1236570313972039682','1236570313795878913','1236258106935721986',NULL,NULL,NULL,NULL,0),('1236570552208506881','1236570552028151810','1236258106935721986',NULL,NULL,NULL,NULL,0),('1236570811944976386','1236570811756232706','1236258106935721986',NULL,NULL,NULL,NULL,0),('1236578498917269506','1236578498887909378','1236258106935721986',NULL,NULL,NULL,NULL,0);
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;

@@ -1,5 +1,8 @@
 package com.dmj.admincommon.constant;
 
+/**
+ * @author Suian
+ */
 public class CommonConstant {
 
     /**

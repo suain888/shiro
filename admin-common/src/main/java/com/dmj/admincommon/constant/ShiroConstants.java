@@ -2,7 +2,8 @@ package com.dmj.admincommon.constant;
 
 /**
  * Shiro通用常量
- * 
+ *
+ * @author Suian
  */
 public interface ShiroConstants {
     /**

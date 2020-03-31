@@ -7,7 +7,8 @@ import org.springframework.context.annotation.Configuration;
 /**
  *将dozer的转换器对象加载到Spring容器中
  *
- **/
+ *
+ * @author Suian*/
 @Configuration
 public class DozerBeanMapperConfigure {
 

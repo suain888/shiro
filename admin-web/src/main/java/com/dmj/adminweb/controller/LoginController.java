@@ -11,6 +11,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+/**
+ * @author Suian
+ */
 @RestController
 @Api(tags = "登录接口")
 public class LoginController {
@@ -19,14 +22,13 @@ public class LoginController {
     private LoginService loginService;
 
     @ApiOperation("登录")
-    @PostMapping(value = "login")
+    @PostMapping(value = "/login")
     public Result login(@RequestBody LoginQuery loginQuery) {
         return loginService.login(loginQuery.getEmail(),loginQuery.getPassword());
     }
 
-
     @ApiOperation("退出")
-    @GetMapping("exit")
+    @GetMapping("/exit")
     public Result exit() {
         return loginService.exit();
     }

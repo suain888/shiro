@@ -1,5 +1,7 @@
 package com.dmj.admincommon.util;
 
+
+
 import org.apache.commons.lang3.time.DateFormatUtils;
 
 import java.lang.management.ManagementFactory;
@@ -9,9 +11,10 @@ import java.util.Date;
 
 /**
  * 时间工具类
- * 
+ *
+ * @author Suian
  */
-public class DateUtils extends org.apache.commons.lang3.time.DateUtils {
+public class DateUtils extends DateFormatUtils {
     public static String YYYY = "yyyy";
 
     public static String YYYY_MM = "yyyy-MM";
@@ -105,20 +108,13 @@ public class DateUtils extends org.apache.commons.lang3.time.DateUtils {
     /**
      * 日期型字符串转化为日期 格式
      */
-    public static Date parseDate(Object str)
+    public static Date parseDate(String s, Object str)
     {
         if (str == null)
         {
             return null;
         }
-        try
-        {
-            return parseDate(str.toString(), parsePatterns);
-        }
-        catch (ParseException e)
-        {
-            return null;
-        }
+        return parseDate(str.toString(), parsePatterns);
     }
     
     /**

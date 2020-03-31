@@ -24,6 +24,7 @@ import java.util.Objects;
 
 /**
  * 自定义realm
+ * @author Suian
  */
 @Slf4j
 public class ShiroRealm extends AuthorizingRealm {

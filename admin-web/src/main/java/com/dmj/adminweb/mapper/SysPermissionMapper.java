@@ -7,6 +7,9 @@ import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
+/**
+ * @author Suian
+ */
 public interface SysPermissionMapper extends BaseMapper<SysPermissionDTO> {
 
      List<SysPermissionVO> findPermissionList();

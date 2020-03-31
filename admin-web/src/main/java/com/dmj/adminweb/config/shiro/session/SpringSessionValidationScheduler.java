@@ -17,7 +17,8 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * 自定义任务调度器完成
- * 
+ *
+ * @author Suian
  */
 @Component
 public class SpringSessionValidationScheduler implements SessionValidationScheduler {

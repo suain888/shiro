@@ -8,9 +8,8 @@ import com.alibaba.fastjson.TypeReference;
 /**
  *
  * @Description: 基于fastjson封装的json转换工具类
- * @author hbb
- * @date 2019年1月1日
  *
+ * @author Suian
  */
 public class JsonUtils {
 
